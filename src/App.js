@@ -1,7 +1,8 @@
 import './App.css';
-import EmployeeInfo from './components/EmployeeInfo';
-import UserGreeting from './components/UserGreeting'
-import UseStateExample from './components/UseStateExample';
+import EmployeeInfo from './components/UseStateExample/EmployeeInfo';
+// import UserStateAnotherExample from './components/UserStateAnotherExample';
+// import UserStateExample1 from './components/UserStateExample1';
+import UseEffectExample1 from './components/UseEffectExample/UseEffectExample1'
 
 
 function App() {
@@ -36,16 +37,12 @@ function App() {
 
   return (
     <div className="App">
-      {user.name}
+      {/* {user.name}
       <p>{user.age}</p>
 
       {user.age && user.age > 25 && <p>You are eligible</p>}
 
       <h1 className="user-city" >{getUserCity(user.city)}</h1>
-
-      {/* <main></main> html element */}
-
-      {/* <Main></Main> react component */}
 
       {user.type === 'A' ? (<>
         <div>user type is a</div>
@@ -69,13 +66,16 @@ function App() {
       <UserGreeting />
       <UserGreeting />
       <UserGreeting />
-      <UserGreeting />
+      <UserGreeting /> */}
 
-      <EmployeeInfo name="Ravi" city="San Francisco" getEmployeeDetail={getEmployeeDetail} />
+      {/* <EmployeeInfo name="Ravi" city="San Francisco" getEmployeeDetail={getEmployeeDetail} />
       <EmployeeInfo name="Ravi" getEmployeeDetail={getEmployeeDetail} />
-      <EmployeeInfo getEmployeeDetail={getEmployeeDetail} />
+      <EmployeeInfo getEmployeeDetail={getEmployeeDetail} /> */}
 
-      <UseStateExample />
+      {/* <UseStateExample /> */}
+      {/* <UserStateAnotherExample /> */}
+      {/* <UserStateExample1 /> */}
+      <UseEffectExample1 name="XYZ" />
     </div>
   );
 }

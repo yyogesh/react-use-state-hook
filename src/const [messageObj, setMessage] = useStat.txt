@@ -1,0 +1,49 @@
+const [messageObj, setMessage] = useState({
+  author: '',
+  message: {
+    id: 1,
+    text: ''
+  }
+});
+
+// Wrong
+setMessage(prevState => ({
+  ...prevState,
+  text: 'My message'
+}));
+
+// Wrong
+setMessage(prevState => ({
+  ...prevState.message,
+  text: 'My message'
+}));
+
+// Wrong
+setMessage(prevState => ({
+  ...prevState,
+  message: {
+    text: 'My message'
+  }
+}));
+
+// Correct
+setMessage(prevState => ({
+  ...prevState,           // copy all other field/objects
+  message: {              // recreate the object that contains the field to update
+    ...prevState.message, // copy all the fields of the object
+    text: 'My message'    // overwrite the value of the field to update
+  }
+}));
+
+// PURE FUNCTION 👼
+const pureAdd = (num1, num2) => {
+  return num1 + num2;
+};
+
+
+//IMPURE FUNCTION 😈
+let plsMutateMe = 0;
+const impureAdd = (num) => {
+  return (plsMutateMe += num);
+};
+
